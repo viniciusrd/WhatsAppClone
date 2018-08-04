@@ -14,7 +14,12 @@
 		98075259210AA4FB00401373 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 98075258210AA4FB00401373 /* GoogleService-Info.plist */; };
 		9807525D210AB0BB00401373 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9807525C210AB0BB00401373 /* LoginViewController.swift */; };
 		9807525F210AB0E300401373 /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9807525E210AB0E300401373 /* CreateAccountViewController.swift */; };
+		98368A5F210FDEE400559C61 /* FirebaseUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98368A5E210FDEE400559C61 /* FirebaseUtil.swift */; };
+		98368A61210FEBFB00559C61 /* Usuario.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98368A60210FEBFB00559C61 /* Usuario.swift */; };
+		984C3F572116071600E4F845 /* ContatoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 984C3F562116071600E4F845 /* ContatoTableViewCell.swift */; };
+		984C3F592116096800E4F845 /* ContatosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 984C3F582116096800E4F845 /* ContatosViewController.swift */; };
 		985ECDBF210CD3AB0013CEFD /* AjustesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 985ECDBE210CD3AB0013CEFD /* AjustesViewController.swift */; };
+		986689D9210E996B00EAAEFA /* Base64.swift in Sources */ = {isa = PBXBuildFile; fileRef = 986689D8210E996B00EAAEFA /* Base64.swift */; };
 		E3F80F8CA9592CCB5A0ED5C0 /* Pods_WhatsApp_Clone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0E9186E091BEAC41189A005 /* Pods_WhatsApp_Clone.framework */; };
 /* End PBXBuildFile section */
 
@@ -29,7 +34,12 @@
 		98075258210AA4FB00401373 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		9807525C210AB0BB00401373 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		9807525E210AB0E300401373 /* CreateAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
+		98368A5E210FDEE400559C61 /* FirebaseUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseUtil.swift; sourceTree = "<group>"; };
+		98368A60210FEBFB00559C61 /* Usuario.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Usuario.swift; sourceTree = "<group>"; };
+		984C3F562116071600E4F845 /* ContatoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContatoTableViewCell.swift; sourceTree = "<group>"; };
+		984C3F582116096800E4F845 /* ContatosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContatosViewController.swift; sourceTree = "<group>"; };
 		985ECDBE210CD3AB0013CEFD /* AjustesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AjustesViewController.swift; sourceTree = "<group>"; };
+		986689D8210E996B00EAAEFA /* Base64.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Base64.swift; sourceTree = "<group>"; };
 		A0E9186E091BEAC41189A005 /* Pods_WhatsApp_Clone.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WhatsApp_Clone.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8167C87CF6DE598D2B33D71 /* Pods-WhatsApp Clone.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhatsApp Clone.release.xcconfig"; path = "Pods/Target Support Files/Pods-WhatsApp Clone/Pods-WhatsApp Clone.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -76,6 +86,8 @@
 		98075243210AA39500401373 /* WhatsApp Clone */ = {
 			isa = PBXGroup;
 			children = (
+				984C3F532116059E00E4F845 /* Celula */,
+				986689D7210E995500EAAEFA /* Helper */,
 				9807525B210AB07900401373 /* ViewController */,
 				9807525A210AB05500401373 /* Model */,
 				98075244210AA39500401373 /* AppDelegate.swift */,
@@ -91,6 +103,7 @@
 		9807525A210AB05500401373 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				98368A60210FEBFB00559C61 /* Usuario.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -105,12 +118,30 @@
 			path = ViewController;
 			sourceTree = "<group>";
 		};
+		984C3F532116059E00E4F845 /* Celula */ = {
+			isa = PBXGroup;
+			children = (
+				984C3F562116071600E4F845 /* ContatoTableViewCell.swift */,
+			);
+			path = Celula;
+			sourceTree = "<group>";
+		};
 		985ECDBD210CD37E0013CEFD /* Tabs */ = {
 			isa = PBXGroup;
 			children = (
 				985ECDBE210CD3AB0013CEFD /* AjustesViewController.swift */,
+				984C3F582116096800E4F845 /* ContatosViewController.swift */,
 			);
 			path = Tabs;
+			sourceTree = "<group>";
+		};
+		986689D7210E995500EAAEFA /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				986689D8210E996B00EAAEFA /* Base64.swift */,
+				98368A5E210FDEE400559C61 /* FirebaseUtil.swift */,
+			);
+			path = Helper;
 			sourceTree = "<group>";
 		};
 		BADBA1ADBA309C8AA5D4EC3D /* Frameworks */ = {
@@ -200,6 +231,7 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-WhatsApp Clone/Pods-WhatsApp Clone-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
@@ -207,6 +239,7 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
@@ -240,9 +273,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				984C3F572116071600E4F845 /* ContatoTableViewCell.swift in Sources */,
 				985ECDBF210CD3AB0013CEFD /* AjustesViewController.swift in Sources */,
+				984C3F592116096800E4F845 /* ContatosViewController.swift in Sources */,
 				9807525F210AB0E300401373 /* CreateAccountViewController.swift in Sources */,
+				98368A61210FEBFB00559C61 /* Usuario.swift in Sources */,
 				9807525D210AB0BB00401373 /* LoginViewController.swift in Sources */,
+				986689D9210E996B00EAAEFA /* Base64.swift in Sources */,
+				98368A5F210FDEE400559C61 /* FirebaseUtil.swift in Sources */,
 				98075245210AA39500401373 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

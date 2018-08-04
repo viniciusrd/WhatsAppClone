@@ -8,6 +8,7 @@
 
 import UIKit
 import FirebaseAuth
+import FirebaseDatabase;
 
 class CreateAccountViewController: UIViewController {
 
@@ -16,12 +17,14 @@ class CreateAccountViewController: UIViewController {
     @IBOutlet weak var fieldPassword: UITextField!
     
     var mAuth: Auth!;
+    var mDatabase: Database!;
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         //Configurar o firebase
         self.mAuth = Auth.auth();
+        self.mDatabase = Database.database();
         
     }
     
@@ -47,6 +50,19 @@ class CreateAccountViewController: UIViewController {
 
                         if error == nil{
                             print("sucesso");
+                            
+                            var usuarioFirebase: Dictionary<String, String> = [:];
+                            
+                            usuarioFirebase["nome"] = name;
+                            usuarioFirebase["email"] = email
+                            
+                            //Converter para base64 Email
+                            
+                            let keyBase64 = Base64().decodeStringBase64(text: email);
+                            
+                            let usuarios = self.mDatabase.reference().child("usuarios");
+                            usuarios.child(keyBase64).setValue(usuarioFirebase);
+                            
                         }else{
                             print("erro");
                         }
